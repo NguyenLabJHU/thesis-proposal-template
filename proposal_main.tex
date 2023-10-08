@@ -19,7 +19,7 @@
 
 
 \usepackage[ruled]{algorithm2e} % algorithm package
-\usepackage[title,toc,titletoc]{appendix}
+\usepackage[title,titletoc]{appendix}
 \usepackage{autobreak}
 \usepackage[english]{babel}		% for other languages
 % bibliographic package
@@ -39,7 +39,7 @@
 \usepackage{enumitem}			% list environment
 \usepackage{float}              % for image floating
 \usepackage[T1]{fontenc}		% output
-\usepackage[left=1in, right=1.0in, top=1.0in, bottom=1.0in]{geometry}		% margin manipulation'
+\usepackage[left=1in, right=1.0in, top=1.0in, bottom=1.0in]{geometry}		% margin manipulation
 
 
 \usepackage{fancyhdr}
@@ -87,7 +87,7 @@
 \titleformat{\section}
 {\large\bfseries}{\thesection}{1em}{}[{\titlerule}]
 \titleformat*{\subsection}{\normalsize\bfseries}
-\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\subsubsection}{\normalsize\sffamily}
 
 
 
@@ -121,11 +121,13 @@
 \DeclareMathOperator{\skw}{skw}
 \newcommand{\dC}{$^{\circ}$C}
 
-%% for basic commenting purpose (you can add more)
+
+%% for basic commenting purposes (you can add more)
 \newcommand{\redtext}{\textcolor{red}}
 \newcommand{\ADDCITATION}{\redtext{(ADD CITATION)}}
 \newcommand{\ADDFIGURE}{\redtext{(ADD FIGURE)}}
 \newcommand{\ADDTABLE}{\redtext{(ADD TABLE)}}
+
 
 %% to add quote
 \newcommand{\say}[2]{\hfill\small\enquote{\textit{#1}}{ - \small\textsc{#2}.}}
@@ -155,8 +157,9 @@
     Author name   % AUTHOR (student) NAME
 \end{center}
 
-\vspace{0.5in}
+\vspace{0.75in}
 
+% If you have more people on your committee then squeeze out some spaces or use the minipage feature
 \begin{singlespace}
 
     \textbf{Primary advisor:}
@@ -166,8 +169,7 @@
     Department of Biology \\
     Johns Hopkins University, Baltimore, MD \\
 
-    
-    \textbf{Thesis proposal committee members:} 
+    \textbf{Disseration proposal committee members:} 
     
     Dr. Albrecht Einstein \\
     Professor\\
@@ -181,7 +183,8 @@
     
 \end{singlespace}
 
-\vspace{0.75in}
+
+\vspace{1in}
 \begin{center}
     Baltimore, Maryland \\  % Location
     Month YEAR              % Like May 2023
@@ -221,12 +224,17 @@
 %% END FRONT MATTER
 
 
+
+
 %% BEGIN MAIN TEXT
 \newpage
 \singlespacing
 \pagenumbering{arabic}
-\section{Background and significance}
-%% 2-page limit
+
+
+
+\section{Background and significance}    %% 2 page limit
+
 \blindtext
 
 \begin{figure}[ht]
@@ -240,17 +248,25 @@
 
 
 
-\newpage
-\section{Research objectives}
 
-%% (1 page limit)
+\section{Research objectives}       %% 1 page limit
+
 \blindtext
 
 
-\newpage
-\section{Proposed methodology and results}
+\phantomsection
+\subsection*{Objective 1: Some major objective here}
+\addcontentsline{toc}{subsection}{Objective 1: Some major objective here}
 
-%% (4 page limit)
+\blindtext
+
+
+
+
+\section{Proposed methodology and results} %% 4 page limit
+
+\subsection{Task 1: Major project task heading here related to objective 1}
+
 \blindtext
 
 \begin{figure}[ht]
@@ -262,24 +278,29 @@
 \end{figure}
 
 
-\newpage
+
+
+\subsubsection*{Subtask 1.1: Some sub-task here}
+\addcontentsline{toc}{subsubsection}{Subtask 1.1: Some sub-task here}
+\blindtext
+
+
+
 \section{Planned publications}
 
-%% (1 page)
 \begin{enumerate} [leftmargin=0.75cm,itemsep=0pt]
+    %
     \item %\fullcite{add_the_biblatex_tag}.
     \item %\fullcite{add_the_biblatex_tag}. \hfill (In preparation)
     \item %\fullcite{add_the_biblatex_tag}.
-    
+    %
 \end{enumerate}
 
 
 
-\newpage
 \section{Timeline}
 
-%% (1 page)
-\blindtext
+%% may add a chart showing the progress
 
 
 
